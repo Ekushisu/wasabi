@@ -28,18 +28,18 @@ module.exports = {
     expand: true,
     cwd: '<%= paths.source %>/bower_components/trumbowyg/dist/ui/',
     src: 'trumbowyg.min.css',
-    dest: '<%= paths.build %>/../admin-assets/css/',
+    dest: '<%= paths.build %>/admin-assets/css/',
   },
   wysiwygjs: {
     expand: true,
     cwd: '<%= paths.source %>/bower_components/trumbowyg/dist/',
     src: 'trumbowyg.min.js',
-    dest: '<%= paths.build %>/../admin-assets/js/',
+    dest: '<%= paths.build %>/admin-assets/js/',
   },
   wysiwygjsicon: {
     expand: true,
     cwd: '<%= paths.source %>/bower_components/trumbowyg/dist/ui/',
     src: 'icons.svg',
-    dest: '<%= paths.build %>/../admin-assets/js/ui/',
+    dest: '<%= paths.build %>/admin-assets/js/ui/',
   }
 };

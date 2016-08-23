@@ -16,3 +16,7 @@ bootstrap/cache/
 
 
 artisan
+
+resources/assets/bower_components
+resources/assets/js/built/
+resources/assets/sass/components/_sprites.scss
