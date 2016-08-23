@@ -16,9 +16,10 @@ class WasabiProvider extends ServiceProvider
       $this->loadViewsFrom(__DIR__.'/resources/views', 'wasabi');
       $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'wasabi');
 
+      $this->publishes([__DIR__.'/config' => config_path('/')],'config');
       $this->publishes([__DIR__.'/resources/views' => resource_path('views/ekushisu/wasabi')],'views');
       $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/ekushisu/wasabi')],'lang');
-      
+
     }
 
     /**
