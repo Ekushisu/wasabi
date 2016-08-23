@@ -4,12 +4,17 @@ This package is a self-deployable and customizable application for Laravel 5.X t
 
 
 ## Installation
-In the root of your installed laravel
-
+1.In the root of your installed laravel
 ```php
 composer require ekushisu/wasabi
 ```
-Then publish wasabi content
+
+2.Add the provider
+```php
+Ekushisu\Wasabi\WasabiProvider::class,
+```
+
+3.Then publish wasabi content
 ```php
 php artisan vendor:publish --provider="Ekushisu\Wasabi\WasabiProvider" --force
 ```
@@ -17,6 +22,7 @@ You can add this different tags:
 * "views"
 * "config"
 * "lang"
+* "assets"
 ```php
 --tag="tag"
 ```
@@ -25,4 +31,17 @@ WASABI is using sub-domain routing, so please, give to WASABI the url, as exempl
 ```txt
 WASABI_DOMAIN=wasabi.zombo.com
 ```
-If empty the default url will be http://localhost
+If empty the default url will be 'localhost'
+
+4.Build Assets
+**NodeJS and Grunt-CLI are required for the following steps**
+* Go to resources/assets/wasabi folder.
+* Type:
+```javascript
+npm install
+```
+* then type the first line or the second if you are respectively on development ENV or production ENV
+```javascript
+grunt dev
+grunt prod
+```
