@@ -23,6 +23,6 @@ You can add this different tags:
 In your env file, or directly in the wasabi config file edit the WASABI domain.
 WASABI is using sub-domain routing, so please, give to WASABI the url, as exemple:
 ```txt
-WASABI_DOMAIN=http://wasabi.zombo.com
+WASABI_DOMAIN=wasabi.zombo.com
 ```
 If empty the default url will be http://localhost
