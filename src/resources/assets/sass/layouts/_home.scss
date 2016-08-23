@@ -1,0 +1,20 @@
+html[data-slug="home"]{
+	h1 {
+		font: {
+			weight: 100;
+			size: 30px;
+		}
+	}
+
+	#joinButton {
+		font-size: 16px;
+
+		i {
+			font-size: 28px;
+		}
+	}
+
+	.connectionButton {
+		font-size: 14px;
+	}
+}

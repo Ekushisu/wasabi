@@ -18,6 +18,7 @@ class WasabiProvider extends ServiceProvider
 
       $this->publishes([__DIR__.'/config' => config_path('/')],'config');
       $this->publishes([__DIR__.'/resources/assets' => resource_path('assets/wasabi/')],'assets');
+      $this->publishes([__DIR__.'/resources/admin-assets' => public_path('assets/wasabi/admin-assets')],'admin-assets');
       $this->publishes([__DIR__.'/resources/views' => resource_path('views/ekushisu/wasabi')],'views');
       $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/ekushisu/wasabi')],'lang');
 

@@ -1,0 +1,258 @@
+html {
+  font-size: 62.5%;
+  @extend .grey;
+  @extend .darken-4;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+[role="main"] {
+    flex: 1 0 auto;
+    position: relative;
+    z-index: 20;
+    margin-top: -1px;
+}
+
+.shadowed {
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.50), 0 2px 10px 0 rgba(0, 0, 0, 0.42);
+}
+
+.container {
+	max-width: 1190px;
+	width: 100% !important;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+    /* @media #{$small-and-down} {
+		padding: 0;
+    } */
+}
+
+pre {
+	color: black;
+}
+
+.col.no-padding {
+	padding: 0;
+
+	&-right {
+		padding-right: 0;
+	}
+
+	&-left {
+		padding-left: 0;
+	}
+
+	&-top {
+		padding-top: 0;
+	}
+
+	&-bottom {
+		padding-bottom: 0;
+	}
+}
+
+.row.no-margin {
+	margin: 0;
+}
+.row.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.cookie-alert-toast {
+	height: auto;
+	max-width: 200px;
+	font-size: 10px;
+	line-height: 1.4;
+	>div {
+		padding: 10px 0;
+	}
+
+	@extend .darken-4;
+	@extend .blue-grey;
+	@extend .shadowed;
+    @media #{$small-and-down} {
+        max-width: initial;
+    }
+}
+
+
+#accept-cookie-button {
+	font-size: 12px !important;
+	margin-top: 10px;
+}
+
+.error-toast {
+	max-width: 200px;
+	height: auto;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 1.4;
+	@extend .white-text;
+	@extend .red;
+	@extend .darken-4;
+
+	@media #{$small-and-down} {
+		width: 100%;
+		max-width: initial;
+		max-height: 120px;
+		overflow: auto;
+		font-size: 10px;
+		margin: 0;
+	}
+}
+
+.success-toast {
+	@extend .error-toast;
+	@extend .green;
+}
+
+.warning-toast {
+	@extend .error-toast;
+	@extend .orange;
+}
+
+.btn.full-width {
+	display: block;
+	height: auto;
+	padding: 10px 0;
+  	line-height: 1.5;
+}
+
+.background-image {
+	@include pos(0,0,0,0, fixed);
+	width: 100%;
+	height: 100%;
+	background: no-repeat center;
+	background-size: cover;
+
+	z-index: 0;
+
+	&:after {
+		display: block;
+		@include pos(0,0,0,0);
+		width: 100%;
+		height: 100%;
+		content:'';
+		background-color: rgba(0, 0, 0, 0.6);
+		background-image: linear-gradient(rgba(find-value($grey, "darken-3"),.3) 2px, transparent 2px),
+		linear-gradient(90deg, rgba(find-value($grey, "darken-3"),.3) 2px, transparent 2px),
+		linear-gradient(rgba(find-value($grey, "darken-3"),.1) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(find-value($grey, "darken-3"),.1) 1px, transparent 1px);
+		background-size:200px 200px, 200px 200px, 20px 20px, 20px 20px;
+		background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+	}
+}
+
+
+html[data-slug="home"],
+html[data-slug="login"],
+html[data-slug="register"] {
+	.valign-wrapper {
+		@include pos(0,0,0,0);
+		width: 100%;
+		height: 100%;
+
+		.valign {
+			width: 100%;
+		}
+	}
+
+	.logo {
+		display: block;
+  		max-width: 215px;
+		margin: 0 auto;
+	}
+
+	input {
+		box-sizing: border-box;
+		height: 30px;
+		font-size: 20px;
+		padding-left: 10px;
+	}
+
+	.input-field .prefix ~ label {
+		margin-left: 40px;
+	}
+
+	label {
+		font-size: 18px;
+		top: 0;
+
+		&.active {
+			font-size: 12px;
+			top: 0.8rem;
+		}
+	}
+
+	[type="checkbox"] + label {
+		margin-top: 10px;
+		margin-left: 12px;
+	}
+
+	@media #{$small-and-down} {
+		[type="submit"] {
+			margin-top: 20px;
+		}
+	}
+}
+
+  /* label color */
+   .input-field label {
+     color: #FFF;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #FFF;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus,
+   .input-field textarea:focus,
+   .input-field input[type=email]:focus {
+     border-bottom: 1px solid find-value($blue-grey,'lighten-1');
+     box-shadow: 0 1px 0 0 find-value($blue-grey,'lighten-1');
+   }
+   /* valid color */
+   .input-field input[type=text].valid, 
+   .input-field textarea.valid,
+   .input-field input[type=email].valid {
+     border-bottom: 1px solid find-value($green,'lighten-1');
+     box-shadow: 0 1px 0 0 find-value($green,'lighten-1');
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid,
+   .input-field textarea.invalid,
+   .input-field input[type=email].invalid {
+     border-bottom: 1px solid find-value($red,'lighten-1');
+     box-shadow: 0 1px 0 0 find-value($red,'lighten-1');
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: find-value($blue-grey,'lighten-1');
+   }
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid find-value($blue-grey,'lighten-1');
+    box-shadow: 0 1px 0 0 find-value($blue-grey,'lighten-1');
+}
+
+input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: find-value($blue-grey,'lighten-1');
+}
+
+
+p {
+	font-size: 14px;
+
+	strong {
+		color: find-value($blue-grey,'darken-1');
+	}
+}
+
+.stripped {
+	background-color: grey;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.1) 5px, rgba(255,255,255,.1) 10px);
+}

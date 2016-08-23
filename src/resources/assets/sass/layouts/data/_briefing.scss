@@ -1,0 +1,146 @@
+html[data-slug="data-briefing"]
+{
+    .sidepanelwrapper
+    {
+        position: relative;
+    }
+
+    .sidepanel
+    {
+        padding: 10px;
+        
+        h4
+        {
+            display: inline-block;
+            padding: 6px 10px;
+            margin: 0 0 15px;
+        }
+
+        .user-list
+        {
+            border: 0;
+
+            &.locked
+            {
+              &::after
+              {
+                content: 'Opération débriefé';
+                display: block;
+                @include pos(0,0,0,0);
+                width: 100%;
+                height: 100%;
+                color: #FFF;
+                background-color: rgba(find-value($blue-grey,"darken-4"), 0.7);
+                @extend .stripped;
+                padding: 50% 30px;
+                text-align: center;
+                font-size: 40px;
+                z-index: 1;
+              }
+            }
+        }
+
+        .user-list-item.avatar
+        {
+            min-height: initial;
+            margin: 0 0 15px;
+            padding: 10px;
+            border: 0;
+            overflow: hidden;
+
+            .secondary-content
+            {
+                @include pos(50%,0,auto,auto);
+                margin-top: -12px;
+            }
+
+            &:last-of-type
+            {
+              margin-bottom: 0;
+            }
+
+            [type="checkbox"].filled-in:checked + label:after,
+            [type="checkbox"].filled-in:disabled:checked + label:after
+            {
+                background-color: find-value($blue-grey,"lighten-1");
+                border-color: find-value($blue-grey,"lighten-1");
+            }
+
+            [type="checkbox"].filled-in + label.abs:after,
+            [type="checkbox"].filled-in:disabled + label.abs:after
+            {
+                background-color: find-value($red,"base");
+                border-color: find-value($red,"base");
+            }
+
+            [type="checkbox"].filled-in + label.abs:before
+            {
+                content: 'X';
+                font-size: 18px;
+                color: #FFF;
+                top: -3px;
+                left: 4px;
+                width: 16px;
+                height: 16px;
+                transform: initial !important;
+                border: 0 !important;
+            }
+
+            [type="checkbox"].filled-in:not(:checked) + label:not(.abs):before
+            {
+                content: '?';
+                font-size: 16px;
+                color: #FFF;
+                top: -4px;
+                left: 6px;
+                width: 16px;
+                height: 16px;
+                transform: initial !important;
+                border: 0 !important;
+            }
+
+            [type="checkbox"].filled-in:not(:checked) + label:not(.abs):after,
+            [type="checkbox"].filled-in:disabled:not(:checked) + label:not(.abs):after
+            {
+                background-color: find-value($orange,"base");
+                border-color: find-value($orange,"base");
+            }
+        }
+
+        .user-list-item-rank-thumbnail
+        {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 45px;
+            padding: 0;
+            margin: 0 6px 0 0;
+        }
+
+        .user-list-item-info
+        {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 65%;
+
+            .title
+            {
+                display: block;
+                line-height: normal;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .tabs
+    {
+      .indicator
+      {
+        background-color: #FFF;
+      }
+    }
+
+    .content
+    {
+      padding: 10px 0 30px;
+    }
+}

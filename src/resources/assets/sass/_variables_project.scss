@@ -1,0 +1,20 @@
+$classic: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+$bleuDark: #153755;
+$color1: $bleuDark;
+
+
+.xdebug-var-dump {
+  display: block;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  background: #FFF;
+  font-size: 12px;
+  padding: 20px;
+  width: 1200px;
+  margin: 0 auto;
+}
+

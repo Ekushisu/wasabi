@@ -1,0 +1,39 @@
+$small-screen-up: 768px !default;
+$medium-screen-up: 992px !default;
+$large-screen-up: 1192px !default;
+$small-screen: 767px !default;
+$medium-screen: 991px !default;
+$large-screen: 1191px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+// _materialize
+@import '../bower_components/materialize/sass/materialize';
+
+
+// Variables du projet
+@import 'variables_project';
+
+// Import helpers
+@import 'helpers/all';
+@import 'base/basics';
+@import 'base/owlcarousel';
+
+
+@import 'layouts/header';
+@import 'layouts/footer';
+
+@import 'layouts/home';
+@import 'layouts/login';
+@import 'layouts/data/commons';
+@import 'layouts/data/header';
+@import 'layouts/data/home';
+@import 'layouts/data/waiting';
+@import 'layouts/data/briefing';
+
+// Components
+@import 'components/clearfix';

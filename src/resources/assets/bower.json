@@ -1,0 +1,22 @@
+{
+  "name": "Assets VRP",
+  "version": "1.0.0",
+  "authors": [
+    "Flamm <tom0016@hotmail.fr>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=2.1.1",
+    "materialize": ">=0.97.0",
+    "Chart.js": "1.0.2",
+    "trumbowyg": "^2.1.0"
+  }
+}

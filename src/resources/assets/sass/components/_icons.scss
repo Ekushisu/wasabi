@@ -1,0 +1,29 @@
+
+@import '../build_modules/icons';
+
+[class^="icon-"] {
+  &:before {
+    @extend %icon;
+  }
+}
+
+@each $icon in $icons {
+  $name: nth($icon, 1);
+  $value: nth($icon, 2);
+
+  .icon-#{$name} {
+    &:before {
+      content: '#{$value}';
+    }  
+  }
+}
+
+
+@mixin icon($char, $size) {
+  $value: nth($char, 2);
+  @extend %icon;
+  content: '#{$value}';
+  font-size: $size;
+  width: $size;
+  text-align: center;
+}

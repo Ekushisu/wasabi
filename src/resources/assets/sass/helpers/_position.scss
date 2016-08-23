@@ -1,0 +1,15 @@
+@mixin pos($top, $right, $bottom, $left, $position: absolute){
+  @if $top != auto { // perf
+    top: $top 
+  }
+  @if $right != auto { // perf
+    right: $right 
+  }
+  @if $bottom != auto { // perf
+    bottom: $bottom 
+  }
+  @if $left != auto { // perf
+    left: $left 
+  }
+  position : $position;
+}
