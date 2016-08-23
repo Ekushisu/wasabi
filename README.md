@@ -14,8 +14,11 @@ Then publish wasabi content
 php artisan vendor:publish --provider="Ekushisu\Wasabi\WasabiProvider" --force
 ```
 You can add this different tags:
+* "views"
+* "config"
+* "lang"
 ```php
---tags=["views","lang","config"]
+--tag="tag"
 ```
 In your env file, or directly in the wasabi config file edit the WASABI domain.
 WASABI is using sub-domain routing, so please, give to WASABI the url, as exemple:
