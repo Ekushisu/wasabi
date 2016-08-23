@@ -1,0 +1,13 @@
+{
+    "name": "ekushisu/wasabi",
+    "description": "Web application package for gaming team - for Laravel 5.x",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Labeyrie",
+            "email": "thomas.labeyrie@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
