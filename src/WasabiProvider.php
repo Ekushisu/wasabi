@@ -22,6 +22,12 @@ class WasabiProvider extends ServiceProvider
       $this->publishes([__DIR__.'/resources/views' => resource_path('views/ekushisu/wasabi')],'views');
       $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/ekushisu/wasabi')],'lang');
 
+
+      $migrations = $this->app->make('migration.repository');
+      $migrations->createRepository();
+      $migrator = $this->app->make('migrator');
+      $migrator->run(__DIR__.'/databases/migrations');
+
     }
 
     /**
